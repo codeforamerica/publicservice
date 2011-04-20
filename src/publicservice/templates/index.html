@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C //DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xml:lang="en" lang="en"
+      metal:use-macro="master.macros.layout">     
+      <div metal:fill-slot="main">
+          <h1 tal:content="quote.quote">A Quote goes here</h1>
+          <p> - <span tal:replace="quote.name">Joe Schmoe</span> in <span tal:replace="quote.city">City</span>, <span tal:replace="quote.state">State</span></p>
+          <a href="/addform">Add a Quote</a>
+      </div>
+</html>
