@@ -1,6 +1,6 @@
-==============================
-Setting up the DC Foodshed App
-==============================
+=================================
+Setting up the Public Service App
+=================================
 
 The Public Service Recognition App uses a number of existing projects,
 such as Bobo, Chameleon,Geomodel, and Buildout.
