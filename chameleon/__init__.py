@@ -1,1 +1,2 @@
-/home/webmaven/eggs-directory/Chameleon-1.3.0_rc1-py2.5.egg/chameleon/__init__.py
+__import__('pkg_resources').declare_namespace(__name__)
+# no imports are allowed here!
