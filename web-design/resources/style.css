@@ -1,0 +1,351 @@
+/* typography */
+
+@font-face {
+    font-family: 'ArchitectsDaughterRegular';
+    src: url('fonts/architects-daughter-fontfacekit/ArchitectsDaughter-webfont.eot');
+    src: url('fonts/architects-daughter-fontfacekit/ArchitectsDaughter-webfont.eot?#iefix') format('eot'),
+         url('fonts/architects-daughter-fontfacekit/ArchitectsDaughter-webfont.woff') format('woff'),
+         url('fonts/architects-daughter-fontfacekit/ArchitectsDaughter-webfont.ttf') format('truetype'),
+         url('fonts/architects-daughter-fontfacekit/ArchitectsDaughter-webfont.svg#webfontQC0dn1ga') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'LindenHillRegular';
+    src: url('fonts/linden-hill-fontfacekit/LindenHill-webfont.eot');
+    src: url('fonts/linden-hill-fontfacekit/LindenHill-webfont.eot?#iefix') format('eot'),
+         url('fonts/linden-hill-fontfacekit/LindenHill-webfont.woff') format('woff'),
+         url('fonts/linden-hill-fontfacekit/LindenHill-webfont.ttf') format('truetype'),
+         url('fonts/linden-hill-fontfacekit/LindenHill-webfont.svg#webfontByIXJ6az') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'JosefinSlabLight';
+    src: url('fonts/josefin-slab-fontfacekit/JosefinSlab-Light-webfont.eot');
+    src: url('fonts/josefin-slab-fontfacekit/JosefinSlab-Light-webfont.eot?#iefix') format('eot'),
+         url('fonts/josefin-slab-fontfacekit/JosefinSlab-Light-webfont.woff') format('woff'),
+         url('fonts/josefin-slab-fontfacekit/JosefinSlab-Light-webfont.ttf') format('truetype'),
+         url('fonts/josefin-slab-fontfacekit/JosefinSlab-Light-webfont.svg#webfontj5wOmE3w') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'JosefinSlabThin';
+    src: url('fonts/josefin-slab-fontfacekit/JosefinSlab-Thin-webfont.eot');
+    src: url('fonts/josefin-slab-fontfacekit/JosefinSlab-Thin-webfont.eot?#iefix') format('eot'),
+         url('fonts/josefin-slab-fontfacekit/JosefinSlab-Thin-webfont.woff') format('woff'),
+         url('fonts/josefin-slab-fontfacekit/JosefinSlab-Thin-webfont.ttf') format('truetype'),
+         url('fonts/josefin-slab-fontfacekit/JosefinSlab-Thin-webfont.svg#webfontR2lZVBc3') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'LindenHillItalic';
+    src: url('LindenHill-Italic-webfont.eot');
+    src: url('LindenHill-Italic-webfont.eot?#iefix') format('eot'),
+         url('LindenHill-Italic-webfont.woff') format('woff'),
+         url('LindenHill-Italic-webfont.ttf') format('truetype'),
+         url('LindenHill-Italic-webfont.svg#webfontLPbMpnxQ') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body {
+    font: 18px Palatino, Arial, sans-serif;
+	background-image:url('diblue.png');
+	background-repeat:repeat;
+	color:#555;
+	/*background-color:#FDFDFF;*/
+}
+
+.container{
+	background-color:#FDFDFF;
+	width:85%;
+	margin: auto;
+	-webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.toprow{
+
+	width:800px;
+	height:300px;
+	margin: auto;	
+}
+	
+	
+
+.quote{
+	width:100%;
+	display:block;
+	float:left;
+	text-align: center;
+	color:#648991;
+	line-height:1.1em;
+	font-size:2.3em;
+	margin:50px 0px 30px 0px;
+	font-family: 'LindenHillRegular', Palatino, sans-serif;
+
+	
+}
+.who-where{
+	font-size:1.3em;
+	text-align:left;
+	color:#648991;
+	margin:20px 0px 0px 60px;
+}
+
+.middlerow{
+
+	width:800px;
+	margin:auto;
+}
+
+.entryform{
+	overflow:hidden;
+	margin:auto;
+	height:110px;  /* 120 */
+
+	
+
+}
+
+form fieldset {
+
+border-width: 0;
+padding: 0px;
+margin: 15 0 0 0;
+}
+
+form label {
+/*float: left;
+clear: left;*/
+position: relative;
+}
+
+.otherfields{
+  margin-top:30px;
+}
+
+form input {
+
+}
+
+#statefield {
+	width:80px;
+
+	
+}
+#namefield{
+	width:300px;
+}
+#cityfield{
+	width:300px;
+}
+
+/*.hidden{
+	hidden:false;
+}*/
+.entryform-field{
+	font:34px 'LindenHill', Arial, sans-serif;
+
+    background-color:#EEE;
+    border:none;
+    color:#555;
+    outline:none;
+    resize:none;
+    width: 200px;
+    float:left;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    
+    -moz-box-shadow: 1px 1px 1px #141414 inset, 0 0 1px #131313 inset;
+    -webkit-box-shadow: 1px 1px 1px #141414 inset, 0 0 1px #131313 inset;
+    box-shadow: 1px 1px 1px #141414 inset, 0 0 1px #131313 inset;
+
+
+}
+
+.formdiv{
+	display:block;
+	float:left;
+	margin:0px 10px 10px 0px;
+
+}
+.formdiv label{
+	vertical-align:bottom;
+
+	clear:both;
+	display:block;
+
+}
+
+.form label {
+	font-size: 0.9em;
+	display: block;
+	line-height: 25px;
+	margin: 0px 0px 0px 0px;
+	color:#333;
+}
+
+#quotefield{
+	color:#648991;
+	width:700px;
+	vertical-align:top;
+	text-align:left;
+}
+
+
+#submitbutton{
+	background-color:#3194c6;
+	display: inline-block;
+  padding: 10px  20px;
+  background: #3194c6;
+  border:0px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3194c6), to(#5bacd6));
+  background: -moz-linear-gradient(#3194c6, #5bacd6);
+  text-shadow: 0 -1px 1px rgba(19,65,88,.8);
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+  -moz-transition: -moz-transform .2s ease-in-out;
+  -o-transition: -o-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  margin-top:4px;
+  vertical-align:top;
+
+  float:right;
+
+}
+.actions{
+  margin-right:30px;
+  float:right;
+
+}
+.button span{
+  display: inline-block;
+  padding: 10px  20px;
+  background: #3194c6;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3194c6), to(#5bacd6));
+  background: -moz-linear-gradient(#3194c6, #5bacd6);
+  text-shadow: 0 -1px 1px rgba(19,65,88,.8);
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+  -moz-transition: -moz-transform .2s ease-in-out;
+  -o-transition: -o-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  
+}
+
+.button{
+ display: inline-block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow:
+    0 8px 0 #1a74a1,
+    0 15px 20px rgba(0,0,0,.35);
+  -moz-box-shadow:
+    0 8px 0 #1a74a1,
+    0 15px 20px rgba(0,0,0,.35);
+  box-shadow:
+    0 8px 0 #1a74a1,
+    0 15px 20px rgba(0,0,0,.35);
+     -webkit-transition: -webkit-box-shadow .2s ease-in-out;
+  -moz-transition: -moz-box-shadow .2s ease-in-out;
+  -o-transition: -o-box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out;
+
+}
+
+.button:active {
+  -webkit-box-shadow:
+    0 8px 0 #1a74a1,
+    0 12px 10px rgba(0,0,0,.3);
+  -moz-box-shadow:
+    0 8px 0 #1a74a1,
+    0 12px 10px rgba(0,0,0,.3);
+  box-shadow:
+    0 8px 0 #1a74a1,
+    0 12px 10px rgba(0,0,0,.3);
+}
+
+.button:active span {
+  -webkit-transform: translate(0, 4px);
+  -moz-transform: translate(0, 4px);
+  -o-transform: translate(0, 4px);
+  transform: translate(0, 4px);
+}
+
+.bottomrow{
+
+	width:800px;
+	margin:auto;
+
+	
+}
+.video{
+
+	width:380px;
+	float:left;
+	display:inline-block;
+
+}
+.what-it-is-bro{
+
+	width:400px;	
+	float:left;
+	display:inline-block;
+	line-height:1.3em;
+   font: 22px 'LindenHillRegular', Arial, sans-serif;
+
+}
+
+.logo{
+   width:70px;
+   float:left;
+   height:70px;
+   display:inline;
+}
+
+.about-text{
+   width:400px;
+   float:left;
+   display:inline-block;
+}
+
+.foot{
+	clear:both;
+	margin:auto;
+	display:block;
+	width:800px;
+	margin-top:30px;
+	background-color:#fefefe;
+
+
+}
+
+.foot img{
+	margin:auto;
+	margin: 20px;
+	height:120px;
+
+	padding: 20px;
+
+}
