@@ -6,14 +6,30 @@
       xml:lang="en" lang="en"
       metal:define-macro="layout">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Public Service Recognition Week 2011</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Civic High-fives</title>
+  <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+  <link href="http://www.yes.com/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <meta name="description" content="thanks for serving"/>
+  <meta name="keywords" content="government public servant appreciation week, psrw, quotes"/>
+  <meta name="robots" content="index, follow"/>
+  <script type="text/javascript" src="js/jquery-1.5.2.js"></script>
 </head>
 <body>
-        <h1></h1>
-       
+    <div class="container">
     <div metal:define-slot="main">
     </div>
-    
+<div class="foot"><p>brought to you by:</p><a href="http://codeforamerica.org"><img src="/images/cfalogo.png" height="100px"/></a><a href="http://govloop.com"><img src="/images/govlooplogogreenyellowonwhite-1.jpg" height="20px"/></a></div>
+
+<script type="text/javascript">
+	$('#quotefield').focus(function() {
+	  $('#quotefield').height('120px');
+	  $('#quotefield').empty();
+	  $('fieldset.otherfields').toggleClass();
+	  $('div.entryform').height('300px');
+	});
+
+</script>
+</div>  
 </body>
 </html>
