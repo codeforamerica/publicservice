@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C //DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xml:lang="en" lang="en"
+      metal:use-macro="master.macros.layout">     
+    <div tal:omit-tag="" metal:fill-slot="main">
+	<div class="toprow">
+		<div class="quote" tal:content="quote.quote">I had lost my dog but the nice lady brought it back to me</div>
+		<div class="who-where"><span tal:content="quote.name">John Perry Snow</span>, <span tal:content="quote.city">Albawhatsee</span>, <span tal:content="quote.state">MS</span></div>
+		<div class="actions"><a href="#" class="button"><span>Another, Please</span></a></div>
+	</div><!-- end toprow -->
+	<div class="middlerow">
+	<div class="entryform">
+		<form action="/add" method="post">
+		<fieldset>
+			<label for="quotefield" class="formlabel">give your public servant a shout-out!</label>
+			<textarea rows="1" cols="3" name="quote" class="entryform-field" id="quotefield">enter your shout out here!</textarea>
+			<!--	<input type="text" class="entryform-field" id="namefield" value="John"/> -->
+			<input class="button" id="submitbutton" type="submit" value="high five!"/>
+			</fieldset>
+			
+		<fieldset class="otherfields">
+			<div class="formdiv">
+				<label for="namefield" class="formlabel hidden">Name</label>
+				<input class="entryform-field hidden" name="name" id="namefield"/>
+			</div>
+			<div class="formdiv">
+				<label for="cityfield" class="formlabel hidden">City</label>
+				<input class="entryform-field hidden" name="city" id="cityfield"/>
+			</div>
+			<div class="formdiv">
+				<label for="statefield" class="formlabel hidden">State</label>
+				<input class="entryform-field hidden" name="state" id="statefield"/>
+			</div>
+		</fieldset>
+		</form>
+		
+	</div><!--end entryform -->
+	</div><!--end middlerow -->
+	<div class="bottomrow">
+		<div class="what-it-is-bro"><img class="logo" height="75px" width="75px" src="/images/mint2.png" alt="High-five a Public Servant"/>
+<p>Public Servants keep our cities livable. They pave roads, make sure the water supply is free of contaminants, administer schools, health care, transit systems, and pretty much every critical feature of our society. Does the system work perfectly? Of course not. That said, the system is full of people who are working not just for a paycheck, but for the love of service. Isn't it about time we gave them some love? We thought so, which is why we're going to high-five as many public servants as possible over the first weekk of May.</p>
+		</div>
+		
+		<div class="video">
+			<img src="/images/oceanvid.png"/>
+			<!--<iframe title="YouTube video player" width="332" height="351" src="http://www.youtube.com/embed/vLWTaGfBoRQ" frameborder="0" allowfullscreen></iframe>-->
+		</div>
+		
+	</div><!-- end bottomrow -->
+    </div><!-- end container -->
+
+</html>
