@@ -220,7 +220,7 @@ form input {
 }
 
 #statefield {
-    width:50px;
+    width:80px;
 
 }
 
@@ -229,7 +229,7 @@ form input {
 }
 
 #cityfield{
-    width:175px;
+    width:150px;
 }
 
     /*.hidden{
