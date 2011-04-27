@@ -6,11 +6,11 @@
       xml:lang="en" lang="en"
       metal:use-macro="master.macros.layout">     
     <div tal:omit-tag="" metal:fill-slot="main">
-	<div class="toprow">
-		<div class="quote" tal:content="quote.quote">I had lost my dog but the nice lady brought it back to me</div>
-		<div class="who-where"><span tal:content="quote.name">John Perry Snow</span>, <span tal:content="quote.city">Albawhatsee</span>, <span tal:content="quote.state">MS</span></div>
-		<div class="actions"><a href="#" class="button"><span>Another, Please</span></a></div>
-	</div><!-- end toprow -->
+        <div class="toprow">
+            <h1 class="quote">&ldquo;<a href="/" tal:attributes="href quote_url" tal:content="quote.quote|default">I had lost my dog but the nice lady brought it back to me</a>&rdquo;</h1>
+            <div class="who-where">&mdash;&nbsp;<span tal:replace="quote.name|default">John Perry Snow</span>, <span tal:replace="quote.city|default">Albawhatsee</span>, <span tal:replace="quote.state|default">MS</span></div>
+		<div class="actions"><a href="/" class="button"><span>Another, Please</span></a></div>
+    </div><!-- end toprow -->
 	<div class="middlerow">
 	<div class="logo"><!-- <img class="logo" height="75px" width="75px" src="/images/mint2.png" alt="High-five a Public Servant"/> --></div>
 	<div class="entryform">

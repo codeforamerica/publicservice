@@ -54,7 +54,10 @@ def index():
     randomquote = Quotes.all().order('rand').filter('rand >=', rand_num).get()
     if randomquote is None:
         randomquote = Quotes.all().order('-rand').filter('rand <', rand_num).get()
-    return template(master=master, quote=randomquote)
+    quote_url = '/'
+    if randomquote is not None:
+        quote_url = '/q/'+str(randomquote.key().id())
+    return template(master=master, quote=randomquote, quote_url=quote_url)
 
 @bobo.query('/q/:quote_id')
 def quote(quote_id):
