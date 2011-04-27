@@ -68,7 +68,7 @@
 }
 
 @font-face {
-    font-family: 'ArvoItalic';
+    font-family: 'ArvoRegular';
     src: url('/fonts/arvo-fontfacekit/Arvo-Italic-webfont.eot');
     src: url('/fonts/arvo-fontfacekit/Arvo-Italic-webfont.eot?#iefix') format('embedded-opentype'),
          url('/fonts/arvo-fontfacekit/Arvo-Italic-webfont.woff') format('woff'),
@@ -92,7 +92,7 @@
 }
 
 @font-face {
-    font-family: 'ArvoItalic';
+    font-family: 'ArvoRegular';
     src: url('/fonts/arvo-fontfacekit/Arvo-BoldItalic-webfont.eot');
     src: url('/fonts/arvo-fontfacekit/Arvo-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
          url('/fonts/arvo-fontfacekit/Arvo-BoldItalic-webfont.woff') format('woff'),
@@ -107,8 +107,9 @@
 
 body {
     font: 18px 'ArvoRegular', Palatino, Arial, sans-serif;
-    background-image:url('/images/diblue.png');
-    background-repeat:repeat; 
+/*    background-image:url('/images/diblue.png');
+    background-repeat:repeat;*/
+    background-color:#041D3F;
 /*        background-image:url('../images/284171752_d3d432ac0b_b-mzn37.jpg');
          background-repeat:no-repeat; */
     color:#555;
@@ -145,7 +146,8 @@ h1.quote{
     font-size:2.3em;
     margin:50px 0px 30px 0px;
     font-family: 'ArvoItalic', 'ArvoRegular', 'LindenHillRegular', Palatino, sans-serif;
-    font-weight: normal;
+    font-weight: bold;
+    font-style:italic;
     /* border: 1px dotted #fff; */
 }
 
@@ -163,7 +165,9 @@ h1.quote a:hover {
     font-size:1.3em;
     text-align:right;
 /*    color:#648991;*/
-   /*  margin:20px 0px 0px 60px; */
+      margin:0px 0px 0px 5px; 
+      vertical-align:bottom;
+      height:60px;
 }
 
 .middlerow{
@@ -280,12 +284,14 @@ form {
 }
 
 #submitbutton{
-    background-color:#3194c6;
+    background-color:#fff;
     display: inline-block;
-    padding: 5px 5px 5px 5px;
-    background: #3194c6;
+/*    padding: 5px 5px 5px 5px;*/
+    background: #fff;
     border:0px;
     margin:0px 0px 0px 0px;
+    color:#041D3F;
+    
     /*
 -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -304,24 +310,25 @@ form {
 }
 
 .actions{
-    margin-right:30px;
+    margin: 0px 30px 10px 10px;
     float:right;
 }
 
 .button span{
     display: inline-block;
-    padding: 10px  20px 10px 20px;
-    background: #3194c6;
+    padding: 3px  5px 3px 5px; 
+    background: #fff;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3194c6), to(#5bacd6));
+    color:#041D3F;
+    /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3194c6), to(#5bacd6));
     background: -moz-linear-gradient(#3194c6, #5bacd6);
     text-shadow: 0 -1px 1px rgba(19,65,88,.8);
     -webkit-transition: -webkit-transform .2s ease-in-out;
     -moz-transition: -moz-transform .2s ease-in-out;
     -o-transition: -o-transform .2s ease-in-out;
-    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;*/
 }
 
 .button{
@@ -345,7 +352,7 @@ form {
     transition: box-shadow .2s ease-in-out;
 */
 }
-
+/*
 .button:active {
   -webkit-box-shadow:
     0 8px 0 #1a74a1,
@@ -357,13 +364,15 @@ form {
     0 8px 0 #1a74a1,
     0 12px 10px rgba(0,0,0,.3);
 }
-
+*/
 .button:active span {
-    -webkit-transform: translate(0, 4px);
+	color:#555;
+/*    -webkit-transform: translate(0, 4px);
     -moz-transform: translate(0, 4px);
     -o-transform: translate(0, 4px);
-    transform: translate(0, 4px);
+    transform: translate(0, 4px);*/
 }
+
 
 .bottomrow{
     width:800px;
@@ -378,7 +387,7 @@ form {
 }
 
 .what-it-is-bro{
-	margin: 10px 0px 0px 0px;
+	margin: 10px 12px 0px 0px;
     width:267px;
     float:left;
     /*display:inline-block;*/
