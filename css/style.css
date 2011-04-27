@@ -55,8 +55,58 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'ArvoRegular';
+    src: url('/fonts/arvo-fontfacekit/Arvo-Regular-webfont.eot');
+    src: url('/fonts/arvo-fontfacekit/Arvo-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/arvo-fontfacekit/Arvo-Regular-webfont.woff') format('woff'),
+         url('/fonts/arvo-fontfacekit/Arvo-Regular-webfont.ttf') format('truetype'),
+         url('/fonts/arvo-fontfacekit/Arvo-Regular-webfont.svg#ArvoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ArvoItalic';
+    src: url('/fonts/arvo-fontfacekit/Arvo-Italic-webfont.eot');
+    src: url('/fonts/arvo-fontfacekit/Arvo-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/arvo-fontfacekit/Arvo-Italic-webfont.woff') format('woff'),
+         url('/fonts/arvo-fontfacekit/Arvo-Italic-webfont.ttf') format('truetype'),
+         url('/fonts/arvo-fontfacekit/Arvo-Italic-webfont.svg#ArvoItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'ArvoRegular';
+    src: url('/fonts/arvo-fontfacekit/Arvo-Bold-webfont.eot');
+    src: url('/fonts/arvo-fontfacekit/Arvo-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/arvo-fontfacekit/Arvo-Bold-webfont.woff') format('woff'),
+         url('/fonts/arvo-fontfacekit/Arvo-Bold-webfont.ttf') format('truetype'),
+         url('/fonts/arvo-fontfacekit/Arvo-Bold-webfont.svg#ArvoRegular') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ArvoItalic';
+    src: url('/fonts/arvo-fontfacekit/Arvo-BoldItalic-webfont.eot');
+    src: url('/fonts/arvo-fontfacekit/Arvo-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/arvo-fontfacekit/Arvo-BoldItalic-webfont.woff') format('woff'),
+         url('/fonts/arvo-fontfacekit/Arvo-BoldItalic-webfont.ttf') format('truetype'),
+         url('/fonts/arvo-fontfacekit/Arvo-BoldItalic-webfont.svg#ArvoItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+
+
 body {
-    font: 18px Palatino, Arial, sans-serif;
+    font: 18px 'ArvoRegular', Palatino, Arial, sans-serif;
     background-image:url('/images/diblue.png');
     background-repeat:repeat; 
 /*        background-image:url('../images/284171752_d3d432ac0b_b-mzn37.jpg');
@@ -94,7 +144,7 @@ h1.quote{
     line-height:1.1em;
     font-size:2.3em;
     margin:50px 0px 30px 0px;
-    font-family: 'LindenHillRegular', Palatino, sans-serif;
+    font-family: 'ArvoItalic', 'ArvoRegular', 'LindenHillRegular', Palatino, sans-serif;
     font-weight: normal;
     /* border: 1px dotted #fff; */
 }
@@ -147,7 +197,7 @@ clear: left;*/
 }
 
 form input {
-  font:24px 'LindenHillRegular', Arial, sans-serif;
+  font:24px 'ArvoRegular', '', Arial, sans-serif;
     background-color:#EEE;
     border:none;
     color:#555;
@@ -328,11 +378,12 @@ form {
 }
 
 .what-it-is-bro{
+	margin: 10px 0px 0px 0px;
     width:267px;
     float:left;
     /*display:inline-block;*/
     line-height:1.3em;
-    font: 22px 'LindenHillRegular', Arial, sans-serif;
+    font: 17px 'ArvoRegular', Arial, sans-serif;
 }
 
 .logo{
