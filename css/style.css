@@ -195,12 +195,16 @@ clear: left;*/
     position: relative;
 }
 
+label.error {
+    color: red;
+}
+
 .otherfields{
     margin-top:10px;
     margin-right:5px;
 }
 
-form input {
+form input, form select {
   font:24px 'ArvoRegular', '', Arial, sans-serif;
     background-color:#EEE;
     border:none;
@@ -220,16 +224,16 @@ form input {
 }
 
 #statefield {
-    width:80px;
+    width:85px;
 
 }
 
 #namefield{
-    width:175px;
+    width:155px;
 }
 
 #cityfield{
-    width:130px;
+    width:155px;
 }
 
     /*.hidden{
@@ -261,10 +265,16 @@ form {
     margin:6px 0px 10px 20px;*/
 }
 
+.formdiv {
+    float: left;
+}
+
 .formdiv label{
     vertical-align:bottom;
     clear:both;
     display:block;
+    margin-top: 2px;
+    font-size: 0.85em;
 }
 
 .form label {

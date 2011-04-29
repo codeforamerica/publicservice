@@ -10,10 +10,10 @@ import random
 class Quotes(GeoModel):
     """A location-aware class for quotes.
     """
-    quote = db.StringProperty()
-    name = db.StringProperty()
-    city = db.StringProperty()
-    state = db.StringProperty()
+    quote = db.StringProperty(required=True)
+    name = db.StringProperty(required=True)
+    city = db.StringProperty(required=True)
+    state = db.StringProperty(required=True)
     rand = db.FloatProperty()
     timestamp = db.DateTimeProperty(auto_now=True)
 
