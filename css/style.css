@@ -195,12 +195,16 @@ clear: left;*/
     position: relative;
 }
 
+label.error {
+    color: red;
+}
+
 .otherfields{
     margin-top:10px;
     margin-right:5px;
 }
 
-form input {
+form input, form select {
   font:24px 'ArvoRegular', '', Arial, sans-serif;
     background-color:#EEE;
     border:none;
@@ -220,16 +224,16 @@ form input {
 }
 
 #statefield {
-    width:50px;
+    width:85px;
 
 }
 
 #namefield{
-    width:175px;
+    width:155px;
 }
 
 #cityfield{
-    width:175px;
+    width:155px;
 }
 
     /*.hidden{
@@ -258,13 +262,19 @@ form {
     display:block;
     float:left;
     margin-top:6px;
-    margin:6px 20px 10px 0px;*/
+    margin:6px 0px 10px 20px;*/
+}
+
+.formdiv {
+    float: left;
 }
 
 .formdiv label{
     vertical-align:bottom;
     clear:both;
     display:block;
+    margin-top: 2px;
+    font-size: 0.85em;
 }
 
 .form label {
@@ -281,6 +291,9 @@ form {
     height:120px;
     vertical-align:top;
     text-align:left;
+	background: #ffffff url(/images/formbg.png) no-repeat;
+	font-size: 1em;
+	padding: 5px;
 }
 
 #submitbutton{
@@ -380,14 +393,14 @@ form {
 }
 
 .video-map{
-    width:520px;
+    width:500px;
     float:left;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 10px 0px 0px;
     /*display:inline-block;*/
 }
 
 .what-it-is-bro{
-	margin: 10px 12px 0px 0px;
+	margin: 10px 0px 0px 20px;
     width:267px;
     float:left;
     /*display:inline-block;*/
