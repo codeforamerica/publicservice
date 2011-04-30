@@ -287,13 +287,14 @@ form {
 
 #quotefield{
     color:#648991;
-    width:520px;
-    height:120px;
+    width:510px;
+    height:110px;
     vertical-align:top;
     text-align:left;
 	background: #ffffff url(/images/formbg.png) no-repeat;
 	font-size: 1em;
 	padding: 5px;
+
 }
 
 #submitbutton{
