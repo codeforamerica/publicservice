@@ -293,7 +293,7 @@ form {
     text-align:left;
 	background: #ffffff url(/images/formbg.png) no-repeat;
 	font-size: 1em;
-	padding: 5px;
+	padding: 5px 15px 5px 5px;
 
 }
 
@@ -440,7 +440,31 @@ form {
 .foot img{
     margin:auto;
     margin: 20px;
-    height:120px;
+    height:120px; /*120*/
     border: none;
     padding: 20px;
+}
+.footweet {
+	display:inline-block;
+}
+
+.footweet img{
+   height:16px;
+
+
+}
+.bottomrow form {
+    margin:auto;
+	text-align:center;
+	width: 400px;
+	float:right;
+	position:relative;
+	margin-top:50px;
+	
+
+}
+
+.quotepage {
+	display:inline-block;
+	float:right;
 }

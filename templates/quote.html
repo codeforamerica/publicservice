@@ -6,11 +6,17 @@
       xml:lang="en" lang="en"
       metal:use-macro="master.macros.layout">     
    <div tal:omit-tag="" metal:fill-slot="main">
+   	<div class="container">
 	<div class="toprow">
 <h1 class="quote" tal:content="quote.quote">I had lost my dog but the nice lady brought it back to me</h1>
-		<div class="who-where"><span tal:content="quote.name">John Perry Snow</span>, <span tal:content="quote.city">Albawhatsee</span>, <span tal:content="quote.state">MS</span></div>
-		<div class="actions"><a href="/" class="button"><span>Back</span></a></div>
+		<div class="who-where quotepage"><span tal:content="quote.name">John Perry Snow</span>, <span tal:content="quote.city">Albawhatsee</span>, <span tal:content="quote.state">MS</span></div>
+		<div class="actions quotepage"><a href="/" class="button"><span>Back</span></a></div>
 	</div><!-- end toprow -->
-		<div> HI</div>
+		<div class="bottomrow"> <form><p>enter your email address here to find out what's up with us (we don't spam)</p>
+			<input name="email"/>
+			<input class="button" id="submitbutton" type="submit" value="submit"/>
+		</form>
+		</div><!-- end bottomrow -->
+      </div><!-- end container -->
       </div>
 </html>
