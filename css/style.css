@@ -459,7 +459,9 @@ form {
 	width: 400px;
 	float:right;
 	position:relative;
+	left:-25%;
 	margin-top:50px;
+	margin-bottom:50px;
 	
 
 }
