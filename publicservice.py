@@ -91,8 +91,8 @@ def quote(quote_id):
         address = address.replace(' ', '+')
         url="http://maps.google.com/maps/api/geocode/json?address=%s&sensor=false" % address
 
-        response = urllib2.urlopen(url)
-        if response:
+        response = urlfetch.fetch(url)
+        if response.status_code == 200:
             jsongeocode = response.read()
             geocode = json.loads(jsongeocode)
             quote.location.lat = geocode['results'][0]['geometry']['location']['lat']
