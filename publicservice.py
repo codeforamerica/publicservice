@@ -73,7 +73,7 @@ def index():
 def quote(quote_id):
     template = template_loader.load('quote.html')
     quote = Quotes.get_by_id(int(quote_id))
-    if quote.safe:
+    if quote and quote.safe:
         return template(master=master, quote=quote)
     else:
          return bobo.redirect('/')
