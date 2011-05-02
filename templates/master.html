@@ -7,7 +7,7 @@
       metal:define-macro="layout">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <title>Civic High-fives</title>
+  <title  tal:content="quote.quote">Civic High-fives</title>
   <link href="/css/style.css" rel="stylesheet" type="text/css"/>
   <link href="http://www.yes.com/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <meta name="description" content="thanks for serving"/>
@@ -15,11 +15,19 @@
   <meta name="robots" content="index, follow"/>
   <script type="text/javascript" src="js/jquery-1.5.2.js"></script>
   <div metal:define-slot="header" />
-  <script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'72c27113-3bfc-4c68-a34e-b85a85d478db'});</script>
+  <script type="text/javascript">var switchTo5x=false;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'72c27113-3bfc-4c68-a34e-b85a85d478db'});</script>
 </head>
 <body>
+    <div id="sthoverbuttons" class="sthoverbuttons-pos-left">
+        
+        <span  class='st_twitter_large' ></span><br /><span  class='st_facebook_large' ></span><br /><span  class='st_email_large' ></span><br />
+        
+    </div>
     <div class="container">
+        
+        
     <div metal:define-slot="main">
+        
     </div>
 <div class="foot">
 <div class="logos">

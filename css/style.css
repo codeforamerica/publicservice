@@ -405,7 +405,7 @@ form {
     width:267px;
     float:left;
     /*display:inline-block;*/
-    line-height:1.3em;
+    line-height:1.5em;
     font: 17px 'ArvoRegular', Arial, sans-serif;
 }
 
@@ -469,4 +469,14 @@ form {
 .quotepage {
 	display:inline-block;
 	float:right;
+}
+
+#sthoverbuttons {
+font: 11px Helvetica,Tahoma,Arial;
+z-index: 980000!important;
+cursor: pointer;
+margin-left: -7px;
+position: fixed;
+top: 25%;
+width: 50px;
 }
