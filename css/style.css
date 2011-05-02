@@ -168,12 +168,18 @@ h1.quote a:hover {
       margin:0px 0px 0px 5px; 
       vertical-align:bottom;
       height:60px;
+      clear: both;
 }
 
 .middlerow{
 
     width:800px;
+<<<<<<< HEAD
     margin: 30px auto auto auto;
+=======
+    margin:auto;
+    clear: both;
+>>>>>>> 03b9f546e078f3f48ee162a44aa35a78cac0c758
 }
 
 .entryform{
@@ -391,6 +397,7 @@ form {
 .bottomrow{
     width:800px;
     margin:auto;
+    clear: both;
 }
 
 .video-map{

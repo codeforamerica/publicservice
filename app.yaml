@@ -1,7 +1,10 @@
-application: public-service
+application: public-service2
 version: 1
 runtime: python
 api_version: 1
+
+builtins:
+- datastore_admin: on
 
 handlers:
 
