@@ -8,6 +8,15 @@ import urllib2
 import os
 import random
 
+from google.appengine.api import urlfetch
+old_fetch = urlfetch.fetch
+def new_fetch(url, payload=None, method=urlfetch.GET, headers={},
+          allow_truncated=False, follow_redirects=True,
+          deadline=10.0, *args, **kwargs):
+  return old_fetch(url, payload, method, headers, allow_truncated,
+                   follow_redirects, deadline, *args, **kwargs)
+urlfetch.fetch = new_fetch
+
 import simplejson as json
 from decimal import Decimal
 
@@ -83,11 +92,12 @@ def quote(quote_id):
         url="http://maps.google.com/maps/api/geocode/json?address=%s&sensor=false" % address
 
         response = urllib2.urlopen(url)
-        jsongeocode = response.read()
-        geocode = json.loads(jsongeocode)
-        quote.location.lat = geocode['results'][0]['geometry']['location']['lat']
-        quote.location.lon = geocode['results'][0]['geometry']['location']['lng']
-        quote.put()
+        if response:
+            jsongeocode = response.read()
+            geocode = json.loads(jsongeocode)
+            quote.location.lat = geocode['results'][0]['geometry']['location']['lat']
+            quote.location.lon = geocode['results'][0]['geometry']['location']['lng']
+            quote.put()
     if quote and quote.safe:
         return template(master=master, quote=quote)
     else:

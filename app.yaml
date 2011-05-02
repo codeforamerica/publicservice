@@ -8,6 +8,14 @@ builtins:
 
 handlers:
 
+- url: /favicon\.ico
+  static_files: images/favicon.ico
+  upload: images/favicon\.ico
+
+- url: /robots\.txt
+  static_files: robots.txt
+  upload: /robots\.txt
+
 - url: /css
   static_dir: css
 
