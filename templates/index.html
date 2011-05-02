@@ -6,10 +6,12 @@
       xml:lang="en" lang="en"
       metal:use-macro="master.macros.layout">
     <div metal:fill-slot="header" tal:omit-tag="">
-    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="js/jquery.jqEasyCharCounter.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.jqEasyCharCounter.min.js"></script>
+    <script src="/js/yqlgeo.js"></script> 
     <script>
     $(document).ready(function(){
+            
 	var quotePrompt = $('#quotefield').val();
 	var cityPrompt = $('#cityfield').val();
 
@@ -43,12 +45,20 @@
             }
         }
         });
-       
-
-        
-        
-        
       });
+      
+    $(window).ready(function(){  
+            initiate_geolocation();  
+        });   
+  
+        function initiate_geolocation() {  
+            navigator.geolocation.getCurrentPosition(handle_geolocation_query);  
+        }  
+  
+        function handle_geolocation_query(position){  
+            $('#lat').val(position.coords.latitude);
+            $('#lon').val(position.coords.longitude);
+        };
     </script>
     </div>
     <div tal:omit-tag="" metal:fill-slot="main">
@@ -137,6 +147,8 @@
                 <option value="WY">WY</option>
             </select>
 			</div>
+            <input type="hidden" name="lat" id="lat" value="0" />
+            <input type="hidden" name="lon" id="lon" value="0" />
 			<input class="button" id="submitbutton" type="submit" value="submit"/>
 		</fieldset>
 		</form>

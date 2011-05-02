@@ -84,9 +84,9 @@ def addform():
     return template(master=master)
 
 @bobo.post('/add')
-def add(quote, name, city, state):
+def add(quote, name, city, state, lat, lon):
     rand = random.random()
     new_quote = Quotes(quote=quote, name=name, city=city,
-                       state=state, rand=rand, location='0,0')
+                       state=state, rand=rand, location=lat+','+lon)
     new_quote.put()
     return bobo.redirect('/q/'+str(new_quote.key().id()))
