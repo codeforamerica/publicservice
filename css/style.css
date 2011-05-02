@@ -130,8 +130,8 @@ body {
 
 .toprow{
     width:800px;
-    height:220px; 
-    margin: auto;	
+    height:250px; 
+    margin: auto;
  	
 }
 
@@ -173,7 +173,7 @@ h1.quote a:hover {
 .middlerow{
 
     width:800px;
-    margin:auto;
+    margin: 30px auto auto auto;
 }
 
 .entryform{

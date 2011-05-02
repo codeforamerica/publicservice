@@ -5,6 +5,11 @@
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xml:lang="en" lang="en"
       metal:use-macro="master.macros.layout">     
+      <div metal:fill-slot="header" tal:omit-tag="">
+      
+      <title  tal:content="quote.quote">Civic High-fives</title>
+      
+      </div>
    <div tal:omit-tag="" metal:fill-slot="main">
    	<div class="container">
 	<div class="toprow">
