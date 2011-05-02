@@ -16,6 +16,9 @@ class Quotes(GeoModel):
     state = db.StringProperty(required=True)
     rand = db.FloatProperty()
     timestamp = db.DateTimeProperty(auto_now=True)
+    flag = db.BooleanProperty(default=False)
+    hidden = db.BooleanProperty(default=False)
+    safe = db.BooleanProperty(default=True)
 
     def _get_latitude(self):
       return self.location.lat if self.location else None
@@ -47,23 +50,33 @@ template_loader = chameleon.zpt.loader.TemplateLoader(
         
 master = template_loader.load('master.html')
 
-@bobo.query('/')
-def index():
-    template = template_loader.load('index.html')
+def getrandomquote():
     rand_num = random.random()
     randomquote = Quotes.all().order('rand').filter('rand >=', rand_num).get()
     if randomquote is None:
         randomquote = Quotes.all().order('-rand').filter('rand <', rand_num).get()
+    if randomquote is None: return randomquote
+    elif randomquote.safe is False: randomquote = getrandomquote()
+    else: return randomquote
+
+
+@bobo.query('/')
+def index():
+    template = template_loader.load('index.html')
     quote_url = '/'
-    if randomquote is not None:
-        quote_url = '/q/'+str(randomquote.key().id())
-    return template(master=master, quote=randomquote, quote_url=quote_url)
+    quote = getrandomquote()
+    if quote is not None:
+        quote_url = '/q/'+str(quote.key().id())
+    return template(master=master, quote=quote, quote_url=quote_url)
 
 @bobo.query('/q/:quote_id')
 def quote(quote_id):
     template = template_loader.load('quote.html')
     quote = Quotes.get_by_id(int(quote_id))
-    return template(master=master, quote=quote)
+    if quote.safe:
+        return template(master=master, quote=quote)
+    else:
+         return bobo.redirect('/')
 
 @bobo.query('/addform')
 def addform():
