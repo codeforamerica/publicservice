@@ -4,8 +4,12 @@ from geo.geomodel import GeoModel
 import bobo
 import chameleon.zpt.loader
 
+import urllib2
 import os
 import random
+
+import simplejson as json
+from decimal import Decimal
 
 class Quotes(GeoModel):
     """A location-aware class for quotes.
@@ -73,6 +77,17 @@ def index():
 def quote(quote_id):
     template = template_loader.load('quote.html')
     quote = Quotes.get_by_id(int(quote_id))
+    if quote and quote.location=='0.0,0.0':
+        address = quote.city+', '+quote.state
+        address = address.replace(' ', '+')
+        url="http://maps.google.com/maps/api/geocode/json?address=%s&sensor=false" % address
+
+        response = urllib2.urlopen(url)
+        jsongeocode = response.read()
+        geocode = json.loads(jsongeocode)
+        quote.location.lat = geocode['results'][0]['geometry']['location']['lat']
+        quote.location.lon = geocode['results'][0]['geometry']['location']['lng']
+        quote.put()
     if quote and quote.safe:
         return template(master=master, quote=quote)
     else:
