@@ -114,18 +114,21 @@ body {
          background-repeat:no-repeat; */
     color:#555;
     /*background-color:#FDFDFF;*/
+	height: 100%;
+
 }
 
 .container{
 /*    background-color:#FDFDFF; */
     width:85%;
-    margin: auto;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
     color: #FFF;
-
-    
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -4em;    
 }
 
 .toprow{
@@ -174,12 +177,8 @@ h1.quote a:hover {
 .middlerow{
 
     width:800px;
-<<<<<<< HEAD
     margin: 30px auto auto auto;
-=======
-    margin:auto;
-    clear: both;
->>>>>>> 03b9f546e078f3f48ee162a44aa35a78cac0c758
+
 }
 
 .entryform{
@@ -395,9 +394,21 @@ form {
 
 
 .bottomrow{
-    width:800px;
-    margin:auto;
+    width: 800px;
+    margin: auto;
     clear: both;
+}
+
+.logos {
+	width:800px;
+    margin: 100px auto;
+    clear: both;
+	text-align: center;
+}
+
+.logos img {
+	padding: 20px;
+	margin-top: 40px;
 }
 
 .video-map{
@@ -457,8 +468,6 @@ form {
 
 .footweet img{
    height:16px;
-
-
 }
 .bottomrow form {
     margin:auto;
@@ -487,3 +496,44 @@ position: fixed;
 top: 25%;
 width: 50px;
 }
+
+.twitter-share-button {
+	vertical-align: top;
+}
+
+#sharebox {
+	width: 100%;
+	margin: 30px auto auto auto;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	
+}
+
+
+
+#sharebox .title{
+color: white;
+display: block;
+background-color: #5E8FD1;
+padding: 10px 10px 10px 10px;
+font-size: 26px;
+}
+
+#sharebox .content{
+padding: 10px 10px 10px 10px;
+width: 800px;
+margin: auto;
+height: 60px;
+}
+
+#sharebox .social {
+	margin-top: 10px;
+}
+
+#header {
+	text-align: center;
+	margin: 50px auto 25px auto;
+}
+
