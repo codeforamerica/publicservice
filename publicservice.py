@@ -93,7 +93,7 @@ def quote(quote_id):
 
         response = urlfetch.fetch(url)
         if response.status_code == 200:
-            jsongeocode = response.read()
+            jsongeocode = response.content
             geocode = json.loads(jsongeocode)
             quote.location.lat = geocode['results'][0]['geometry']['location']['lat']
             quote.location.lon = geocode['results'][0]['geometry']['location']['lng']
