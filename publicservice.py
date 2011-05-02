@@ -93,11 +93,11 @@ def quote(quote_id):
 
         response = urlfetch.fetch(url)
         if response.status_code == 200:
-            jsongeocode = response.content
-            geocode = json.loads(jsongeocode)
-            quote.location.lat = geocode['results'][0]['geometry']['location']['lat']
-            quote.location.lon = geocode['results'][0]['geometry']['location']['lng']
-            quote.put()
+            try:
+                quote.location.lat = geocode['results'][0]['geometry']['location']['lat']
+                quote.location.lon = geocode['results'][0]['geometry']['location']['lng']
+                quote.put()
+            except: pass
     if quote and quote.safe:
         return template(master=master, quote=quote)
     else:
