@@ -67,13 +67,13 @@
     {  
         switch(error.code)  
         {  
-            case error.PERMISSION_DENIED: alert("user did not share geolocation data");  
+            case error.PERMISSION_DENIED: $('#errormsg').val('user did not share geolocation data');  
             break;  
   
-            case error.POSITION_UNAVAILABLE: alert("could not detect current position");  
+            case error.POSITION_UNAVAILABLE: $('#errormsg').val('could not detect current position');  
             break;  
   
-            case error.TIMEOUT: alert("retrieving position timedout");  
+            case error.TIMEOUT: $('#errormsg').val('retrieving position timedout');  
             break;  
   
             default: alert("unknown error");  
@@ -212,6 +212,7 @@
 			</div>
             <input type="hidden" name="lat" id="lat" value="0" />
             <input type="hidden" name="lon" id="lon" value="0" />
+            <input type="hidden" name="errormsg" id="errormsg" value="" />
 			<input class="button" id="submitbutton" type="submit" value="submit"/>
 		</fieldset>
 		</form>
@@ -223,12 +224,7 @@
 		<div class="video-map"> <iframe width="515" height="350" src="http://www.youtube.com/embed/nx42znxsZhs?rel=0&amp;showinfo=0" frameborder="0" ></iframe>
 		</div> 
 		<div class="what-it-is-bro"><span style="line-height: 1.4em;"><p><strong>Why?</strong><br />They are our unsung heroes. They pave our roads, build our bridges, and support our schools, transit systems, and pretty much every critical feature of our society. They are public servants. Every day, they go to work, not for a paycheck or for fame, but for a desire to help others. They deserve nothing less than our heartfelt gratitude and support. Take this opportunity to let them know.</p></span>
-		    
-        	
 		</div>
-		
-
-		
 	</div><!-- end bottomrow -->
     </div><!-- end container -->
     
