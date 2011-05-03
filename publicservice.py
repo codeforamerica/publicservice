@@ -5,20 +5,10 @@ from geo.geomodel import GeoModel
 import bobo
 import chameleon.zpt.loader
 
-import urllib2
 from decimal import Decimal
 import os
 import random
 import simplejson as json
-
-# monkeypatch urlfetch to use a timeout
-old_fetch = urlfetch.fetch
-def new_fetch(url, payload=None, method=urlfetch.GET, headers={},
-          allow_truncated=False, follow_redirects=True,
-          deadline=8.5, *args, **kwargs):
-  return old_fetch(url, payload, method, headers, allow_truncated,
-                   follow_redirects, deadline, *args, **kwargs)
-urlfetch.fetch = new_fetch
 
 # The main class for storing quotes and their associated geolocation info
 class Quotes(GeoModel):
@@ -106,12 +96,13 @@ def quote(quote_id):
         address = quote.city+', '+quote.state
         address = address.replace(' ', '+')
         url="http://maps.google.com/maps/api/geocode/json?address=%s&sensor=false" % address
-        response = urllib2.urlopen(url)
-        jsongeocode = response.read()
-        geocode = json.loads(jsongeocode)
-        # some queries to Google aren't returning data, which was causing the
-        # errors seen. Wrapping a try around it insulates us from the error.
         try:
+            # some queries to Google aren't returning data, or are timing out,
+            # which causes the errors we'd been seeing. Wrapping a try around
+            # it insulates us from the error.
+            response = urlfetch.fetch(url, deadline=10)
+            jsongeocode = response.content
+            geocode = json.loads(jsongeocode)
             quote.location.lat = geocode['results'][0]['geometry']['location']['lat']
             quote.location.lon = geocode['results'][0]['geometry']['location']['lng']
             quote.put()
