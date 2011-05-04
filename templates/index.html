@@ -128,7 +128,7 @@
             <h1 class="quote">&ldquo;<a href="/" tal:attributes="href quote_url" tal:content="quote.quote|default">I had lost my dog but the nice lady brought it back to me</a>&rdquo;</h1>
             <div class="who-where">&mdash;&nbsp;<span tal:replace="quote.name|default">John Perry Snow</span>, <span tal:replace="quote.city|default">Albawhatsee</span>, <span tal:replace="quote.state|default">MS</span>
             
-            <div class="actions"><a href="/" class="button"><span>Another</span></a></div>
+            <div class="actions"><a href="/" class="button"><span>More</span></a></div>
             </div>
 		
     </div><!-- end toprow -->
@@ -139,7 +139,7 @@
 		<form class="formdiv" action="/add" method="post" id="quoteform">
 		<fieldset>
 			<label for="quotefield" class="formlabel"></label>
-			<textarea rows="1" cols="3" name="quote" class="entryform-field" id="quotefield" style="padding-right: 50px;"> </textarea>
+			<textarea rows="1" cols="3" name="quote" class="entryform-field" id="quotefield"> </textarea>
 			<!--	<input type="text" class="entryform-field" id="namefield" value="John"/> -->
 			
 			</fieldset>
@@ -147,11 +147,11 @@
 		<fieldset class="otherfields">
 			<div class="formdiv">
 				<!-- <label for="namefield" class="formlabel hidden">Name</label> -->
-				<input class="required entryform-field hidden" name="name" value="your name" id="namefield"/>
+				<input class="required entryform-field hidden" name="name" value="Your Name" id="namefield"/>
 			</div>
 			<div class="formdiv">
 				<!-- <label for="cityfield" class="formlabel hidden">City</label> -->
-				<input class="required entryform-field hidden" name="city" id="cityfield" value="city"/>
+				<input class="required entryform-field hidden" name="city" id="cityfield" value="City"/>
 			</div>
 			<div class="formdiv">
 			<!-- 	<label for="statefield" class="formlabel hidden">State</label> -->
