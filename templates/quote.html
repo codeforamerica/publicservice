@@ -6,24 +6,58 @@
       xml:lang="en" lang="en"
       metal:use-macro="master.macros.layout">     
       <div metal:fill-slot="header" tal:omit-tag="">
-      <title>Love Public Service | <span tal:replace="quote.quote|default">Civic High-fives</span></title>
+      <title><span tal:replace="quote.quote|default">Love Public Service</span> #PublicService #PSRW</title>
       </div>
    <div tal:omit-tag="" metal:fill-slot="main">
-   	<div class="container">
+   	<div class="container" tal:omit-tag="" >
+   	<div id="header">
+   	    <a href="/"><img src="/images/loveps.png" height="135px" /></a>
+	    </div>
 	<div class="toprow">
+        
+	    
         <h1 class="quote">&ldquo;<span tal:omit-tag="" tal:content="quote.quote">I had lost my dog but the nice lady brought it back to me</span>&rdquo;</h1>
-		<div class="who-where quotepage"><span tal:content="quote.name">John Perry Snow</span>, <span tal:content="quote.city">Albawhatsee</span>, <span tal:content="quote.state">MS</span></div>
-		<div class="actions quotepage"><a href="/" class="button"><span>Back</span></a></div>
+		<div class="who-where quotepage">- <span tal:content="quote.name">John Perry Snow</span>, <span tal:content="quote.city">Albawhatsee</span>, <span tal:content="quote.state">MS</span></div>
+		<div class="actions quotepage"><a href="/" class="button"><span>Post Another</span></a></div>
 	</div><!-- end toprow -->
-		
-		<div class="bottomrow"> <p align="center"><iframe src="http://www.facebook.com/plugins/like.php?href&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:80px;" allowTransparency="true"></iframe></p>
+		<div class="middlerow">
+    
+   
+		<div class="bottomrow">
+        	
+		    </div>
 		   <!-- <form><p>enter your email address here to find out what's up with us (we don't spam)</p>
 			<input name="email"/>
 			<input class="button" id="submitbutton" type="submit" value="submit"/>
 		</form>-->
 		</div><!-- end bottomrow -->
-	
+		
+	<!--	 <div class="logos">
+               <a href="http://codeforamerica.org"><img src="/images/cfawhite.png" height="100px"/></a>
+                  <a href="http://govloop.com"><img src="/images/govloopwhite.png"  height="100px"/></a>
+              </div>-->
+    
       </div><!-- end container -->
+      
+
       	
       </div>
+    
+
+          <div metal:fill-slot="foot">
+             
+                  
+               <div id="sharebox">	
+                     <div class="title">SHARE THE LOVE</div>
+                     <div class="content">
+                         <img src="/images/cfawhite.png" align="right" height="50px" hspace="20"/><img src="/images/govloopwhite.png" align="left" height="50px" hspace="20"/>
+                      
+                     <div class="social"> <span  class='st_twitter_large' ></span><span  class='st_facebook_large' ></span><span  class='st_email_large' ></span><span  class='st_sharethis_large' ></span></div>
+                      
+
+
+                      </div>
+                  </div>
+          </div>
+          
 </html>
