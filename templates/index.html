@@ -38,10 +38,10 @@
 
 				} 
 	  });	
-//	  $("#quoteform").submit(function() {
+	  $("#quoteform").submit(function() {
 // 	 	alert('Handler for .submit() called.');
-		
-//		});
+		 initiate_geolocation();  
+		});
       $("#quoteform").validate({
         rules: {
             quote: {
@@ -56,7 +56,7 @@
      
      
     $(window).ready(function(){  
-            initiate_geolocation();  
+            //initiate_geolocation();  
         });   
         
         

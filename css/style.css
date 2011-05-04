@@ -1,59 +1,6 @@
 /* typography */
 
-@font-face {
-    font-family: 'ArchitectsDaughterRegular';
-    src: url('/fonts/architects-daughter-fontfacekit/ArchitectsDaughter-webfont.eot');
-    src: url('/fonts/architects-daughter-fontfacekit/ArchitectsDaughter-webfont.eot?#iefix') format('eot'),
-         url('/fonts/architects-daughter-fontfacekit/ArchitectsDaughter-webfont.woff') format('woff'),
-         url('/fonts/architects-daughter-fontfacekit/ArchitectsDaughter-webfont.ttf') format('truetype'),
-         url('/fonts/architects-daughter-fontfacekit/ArchitectsDaughter-webfont.svg#webfontQC0dn1ga') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'LindenHillRegular';
-    src: url('/fonts/linden-hill-fontfacekit/LindenHill-webfont.eot');
-    src: url('/fonts/linden-hill-fontfacekit/LindenHill-webfont.eot?#iefix') format('eot'),
-         url('/fonts/linden-hill-fontfacekit/LindenHill-webfont.woff') format('woff'),
-         url('/fonts/linden-hill-fontfacekit/LindenHill-webfont.ttf') format('truetype'),
-         url('/fonts/linden-hill-fontfacekit/LindenHill-webfont.svg#webfontByIXJ6az') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'JosefinSlabLight';
-    src: url('/fonts/josefin-slab-fontfacekit/JosefinSlab-Light-webfont.eot');
-    src: url('/fonts/josefin-slab-fontfacekit/JosefinSlab-Light-webfont.eot?#iefix') format('eot'),
-         url('/fonts/josefin-slab-fontfacekit/JosefinSlab-Light-webfont.woff') format('woff'),
-         url('/fonts/josefin-slab-fontfacekit/JosefinSlab-Light-webfont.ttf') format('truetype'),
-         url('/fonts/josefin-slab-fontfacekit/JosefinSlab-Light-webfont.svg#webfontj5wOmE3w') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'JosefinSlabThin';
-    src: url('/fonts/josefin-slab-fontfacekit/JosefinSlab-Thin-webfont.eot');
-    src: url('/fonts/josefin-slab-fontfacekit/JosefinSlab-Thin-webfont.eot?#iefix') format('eot'),
-         url('/fonts/josefin-slab-fontfacekit/JosefinSlab-Thin-webfont.woff') format('woff'),
-         url('/fonts/josefin-slab-fontfacekit/JosefinSlab-Thin-webfont.ttf') format('truetype'),
-         url('/fonts/josefin-slab-fontfacekit/JosefinSlab-Thin-webfont.svg#webfontR2lZVBc3') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'LindenHillItalic';
-    src: url('/fonts/LindenHill-Italic-webfont.eot');
-    src: url('/fonts/LindenHill-Italic-webfont.eot?#iefix') format('eot'),
-         url('/fonts/LindenHill-Italic-webfont.woff') format('woff'),
-         url('/fonts/LindenHill-Italic-webfont.ttf') format('truetype'),
-         url('/fonts/LindenHill-Italic-webfont.svg#webfontLPbMpnxQ') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
 @font-face {
     font-family: 'ArvoRegular';
@@ -274,7 +221,7 @@ form {
     vertical-align:top;
     text-align:left;
 	background: #ffffff url(/images/formbg.png) no-repeat;
-    font:20px 'ArvoRegular', '', Arial, sans-serif;
+    font:20px 'ArvoRegular', Arial, sans-serif;
     line-height: 1.2em;
 	padding: 10px 15px 5px 10px;
 
