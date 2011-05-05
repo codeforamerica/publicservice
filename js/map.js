@@ -3,6 +3,7 @@ $(document).ready(function(){
 ///mapdata
 
 	var data = $.getJSON('../mapdata', createMap);
+//	var data = $.getJSON('../js/mapdatar.json', createMap);
 	});
 	
 var createMap = function(data){
@@ -21,7 +22,7 @@ var createMap = function(data){
 	
 	//custom icon
 	var mapIcon = new CM.Icon();
-    mapIcon.image = "../images/mapcircle-orange.png"; //mapcircle.png  mapcircle-yellow.png 
+    mapIcon.image = "../images/mapcircle-bigorange.png"; //mapcircle.png  mapcircle-yellow.png 
     // mapcircle-red.png
     mapIcon.iconSize = new CM.Size(8,8);
     mapIcon.iconAnchor = new CM.Point(4.1,4.5);
@@ -42,10 +43,10 @@ var createMap = function(data){
 		var thisMarker = new CM.Marker(new CM.LatLng(mapPoints[i]['location'][0], mapPoints[i]['location'][1]), {title:"click to see quote", icon:mapIcon});
 		thisMarker.bindInfoWindow("<div style='"+ styleString + "'>" + mapPoints[i].quote + "</div>",  {maxWidth: 400});
 		markers.push(thisMarker);
-	//	map.addOverlay(thisMarker);
+		map.addOverlay(thisMarker);
 	}
-	var clusterer = new CM.MarkerClusterer(map, {clusterRadius: 4, maxZoomLevel: 6});
-	clusterer.addMarkers(markers);
+	//var clusterer = new CM.MarkerClusterer(map, {clusterRadius: 4, maxZoomLevel: 6});
+	//clusterer.addMarkers(markers);
 	
 	map.addControl(new CM.SmallMapControl());    
 };
