@@ -30,7 +30,7 @@
     
     //create a marker
     var sfMarkerLatLng = new CM.LatLng(37.76,-122.45);
-    var styleString = 'font-family:Georgia,Serif; background:red';
+    var styleString = 'font-family:Georgia,Serif; background:f3f';
     var sfMarker = new CM.Marker(sfMarkerLatLng, {title:"SanFran", icon:mapIcon});
     sfMarker.bindInfoWindow("<div style='"+ styleString + "'>I love my busdriver because he smells like pencils.<br /><br />John, San Francisco, CA</div>",  {maxWidth: 300});
     map.addOverlay(sfMarker);
