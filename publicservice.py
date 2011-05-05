@@ -134,3 +134,23 @@ def add(quote, name, city, state, lat, lon, errormsg):
     new_quote.put()
     # after crrating the quote, redirect to the new quote's page. 
     return bobo.redirect('/q/'+str(new_quote.key().id()))
+
+# URL for a map showing all quotes
+@bobo.query('/map')
+def map():
+    quotes = Quotes.all()
+    template = template_loader.load('map.html')
+    return template(master=master, quotes=quotes)
+
+@bobo.query('/mapdata')
+def mapdata():
+    quotes = Quotes.all().filter('location !=', '0.0,0.0')
+    quotearray = []
+    for quote in quotes:
+        attribution='&mdash; '+quote.name+', '+quote.city+', '+quote.state
+        quotearray.append({'location':(quote.location.lat,quote.location.lon),
+                           'quote': quote.quote,
+                           'attribution': attribution})
+    mapdata = json.dumps(quotearray)
+    return mapdata
+    

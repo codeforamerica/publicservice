@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C //DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xml:lang="en" lang="en"
+      metal:use-macro="master.macros.layout">
+    <div metal:fill-slot="header" tal:omit-tag="">
+    <title>We Love Public Service | Show Your Appreciation for #PublicService </title>
+    <script src="/js/yqlgeo.js"></script> 
+    </div>
+    <div tal:omit-tag="" metal:fill-slot="socialbuttons">
+        <div id="sthoverbuttons" class="sthoverbuttons-pos-left">
+            <span  class='st_twitter_large' ></span><br /><span  class='st_facebook_large' ></span><br /><span  class='st_email_large' ></span><br />
+        </div>
+    </div>
+    <div tal:omit-tag="" metal:fill-slot="main">
+        <div id="cm-example" style="width: 100%; height: 500px"></div>
+        <!--map-->
+        <script type="text/javascript" src="http://tile.cloudmade.com/wml/latest/web-maps-lite.js"></script>
+        <script type="text/javascript" src="/js/map.js"></script>
+        <!--comment on the repeat-->
+        <div tal:repeat="quote quotes">
+            <h1 class="quote">&ldquo;<a href="/" tal:attributes="href string:'/'" tal:content="quote.quote|default">I had lost my dog but the nice lady brought it back to me</a>&rdquo;</h1>
+            <div class="who-where">&mdash;&nbsp;<span tal:replace="quote.name|default">John Perry Snow</span>, <span tal:replace="quote.city|default">Albawhatsee</span>, <span tal:replace="quote.state|default">MS</span></div>
+            
+            <div class="actions"><a href="/" class="button"><span>More</span></a></div>
+        </div>
+    </div>
+    
+    <div metal:fill-slot="foot" class="logos">
+        <a href="http://codeforamerica.org"><img src="/images/cfawhite.png" height="100px"/></a>
+        <a href="http://govloop.com"><img src="/images/govloopwhite.png"  height="100px"/></a>
+    <br />    <br />
+    
+       <small>Questions? <a href="mailto:admin@welovepublicservice.org" style="color: white;">Drop us a line.</a></small>
+    </div>
+     
+</html>
