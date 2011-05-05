@@ -471,9 +471,14 @@ padding: 10px 10px 10px 10px;
 font-size: 26px;
 }
 
-#sharebox .title a {
+#sharebox .title a, #sharebox .title a:visited, #sharebox .title a:active {
     text-decoration: none;
     color: white;
+}
+
+#sharebox .title a:hover {
+    text-decoration: none;
+    color: #ccc;
 }
 
 #sharebox .content{
