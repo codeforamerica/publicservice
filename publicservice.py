@@ -144,7 +144,7 @@ def map():
 
 @bobo.query('/mapdata')
 def mapdata():
-    quotes = Quotes.all()
+    quotes = Quotes.all().filter('location !=', '0.0,0.0')
     quotearray = []
     for quote in quotes:
         attribution='&mdash; '+quote.name+', '+quote.city+', '+quote.state
