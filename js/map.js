@@ -2,7 +2,7 @@
 $(document).ready(function(){
 ///mapdata
 
-	var data = $.getJSON('../js/mapdatar.json', createMap);
+	var data = $.getJSON('../mapdata', createMap);
 	});
 	
 var createMap = function(data){
@@ -42,10 +42,10 @@ var createMap = function(data){
 		var thisMarker = new CM.Marker(new CM.LatLng(mapPoints[i]['location'][0], mapPoints[i]['location'][1]), {title:"click to see quote", icon:mapIcon});
 		thisMarker.bindInfoWindow("<div style='"+ styleString + "'>" + mapPoints[i].quote + "</div>",  {maxWidth: 400});
 		markers.push(thisMarker);
-		map.addOverlay(thisMarker);
+	//	map.addOverlay(thisMarker);
 	}
-	//var clusterer = new CM.MarkerClusterer(map, {clusterRadius: 4, maxZoomLevel: 6});
-	//clusterer.addMarkers(markers);
+	var clusterer = new CM.MarkerClusterer(map, {clusterRadius: 4, maxZoomLevel: 6});
+	clusterer.addMarkers(markers);
 	
 	map.addControl(new CM.SmallMapControl());    
 };
