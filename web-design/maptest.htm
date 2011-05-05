@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+
+   <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    <title>We Love Public Service | Show Your Appreciation for #PublicService </title>
+    <script type="text/javascript" src="/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.jqEasyCharCounter.min.js"></script>
+    <script src="/js/yqlgeo.js"></script> 
+  <script type="text/javascript" src="http://tile.cloudmade.com/wml/latest/web-maps-lite.js"></script>
+</head>
+<body>
+
+  <div id="cm-example" style="width: 800px; height: 500px"></div>
+
+  <script type="text/javascript" src="http://tile.cloudmade.com/wml/latest/web-maps-lite.js"></script>
+  <script type="text/javascript">
+    
+    
+    var cloudmade = new CM.Tiles.CloudMade.Web({key: '80c9d4a2783744e0bb4dc7753334e445', styleId: 999, copyright: 'Map tiles &copy; 2011 CloudMade Map data CC-BY-SA OpenStreetMap.org ', minZoomLevel: 4
+});
+    var map = new CM.Map('cm-example', cloudmade);
+    map.setCenter(new CM.LatLng(41.514, -95.137), 4);
+
+
+    var mapIcon = new CM.Icon();
+    mapIcon.image = "../images/mapcircle.png";
+    mapIcon.iconSize = new CM.Size(8,8);
+    mapIcon.iconAnchor = new CM.Point(4.1,4.5);
+    
+    //create a marker
+    var sfMarkerLatLng = new CM.LatLng(37.76,-122.45);
+    var styleString = 'font-family:Georgia,Serif; background:red';
+    var sfMarker = new CM.Marker(sfMarkerLatLng, {title:"SanFran", icon:mapIcon});
+    sfMarker.bindInfoWindow("<div style='"+ styleString + "'>I love my busdriver because he smells like pencils.<br /><br />John, San Francisco, CA</div>",  {maxWidth: 300});
+    map.addOverlay(sfMarker);
+    map.addControl(new CM.SmallMapControl());    
+    
+  </script>
+
+</body>
+</html>
