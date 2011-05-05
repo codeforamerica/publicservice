@@ -1,0 +1,2 @@
+@font-face {font-family: \'ArvoRegular\'; src: url('../fonts/arvo-fontfacekit/Arvo-BoldItalic-webfont.eot'); src: url('../fonts/arvo-fontfacekit/Arvo-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/arvo-fontfacekit/Arvo-BoldItalic-webfont.woff') format('woff'), url('../fonts/arvo-fontfacekit/Arvo-BoldItalic-webfont.ttf') format('truetype'), url('../fonts/arvo-fontfacekit/Arvo-BoldItalic-webfont.svg#ArvoItalic') format('svg'); font-weight: bold; font-style: italic; font-family: \'ArvoRegular\'; font-size:.8em;
+
