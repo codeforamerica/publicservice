@@ -62,12 +62,13 @@ body {
     color:#555;
     /*background-color:#FDFDFF;*/
 	height: 100%;
+	margin: 0;
 
 }
 
 .container{
 /*    background-color:#FDFDFF; */
-    width:85%;
+    width:100%;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -470,8 +471,13 @@ padding: 10px 10px 10px 10px;
 font-size: 26px;
 }
 
+#sharebox .title a {
+    text-decoration: none;
+    color: white;
+}
+
 #sharebox .content{
-padding: 10px 10px 10px 10px;
+padding: 15px 10px 10px 10px;
 width: 800px;
 margin: auto;
 height: 60px;

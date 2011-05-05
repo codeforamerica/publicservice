@@ -153,4 +153,8 @@ def mapdata():
                            'attribution': attribution})
     mapdata = json.dumps(quotearray)
     return mapdata
-    
+
+@bobo.query('/video')
+def video():
+    template = template_loader.load('video.html')
+    return template(master=master, video=video)
