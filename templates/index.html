@@ -126,13 +126,7 @@
     </script>
     
     </div>
-    <div tal:omit-tag="" metal:fill-slot="socialbuttons">
-    
-    <div id="sthoverbuttons" class="sthoverbuttons-pos-left">
-
-           <span  class='st_twitter_large' ></span><br /><span  class='st_facebook_large' ></span><br /><span  class='st_email_large' ></span><br />
-
-       </div></div>
+   
     
     <div tal:omit-tag="" metal:fill-slot="main">
         
@@ -147,7 +141,7 @@
     <div style="clear:both;"></div>
 	<div class="middlerow">
 	<div class="logo"><!-- <img class="logo" height="75px" width="75px" src="/images/mint2.png" alt="High-five a Public Servant"/> --></div>
-	<div class="entryform">
+	<div class="entryform" style="height: auto">
 		<form class="formdiv" action="/add" method="post" id="quoteform">
 		<fieldset>
 			<label for="quotefield" class="formlabel"></label>
@@ -232,20 +226,21 @@
 	</div><!--end entryform -->
 	</div><!--end middlerow -->
 	
-	<div class="bottomrow">
+          
+	<!--<div class="bottomrow">
 		<div class="video-map"> <iframe width="515" height="350" src="http://www.youtube.com/embed/bgM9cCm7SBA?rel=0&amp;showinfo=0" frameborder="0" ></iframe>
 		</div> 
 		<div class="what-it-is-bro"><span style="line-height: 1.4em;"><p><strong>Why?</strong><br />They are our unsung heroes. They pave our roads, build our bridges, and support our schools, transit systems, and pretty much every critical feature of our society. They are public servants. Every day, they go to work, not for a paycheck or for fame, but for a desire to help others. They deserve nothing less than our heartfelt gratitude and support. Take this opportunity to let them know.</p></span>
 		</div>
-	</div><!-- end bottomrow -->
+	</div>--><!-- end bottomrow -->
     </div><!-- end container -->
     
-    <div metal:fill-slot="foot" class="logos">
+    <!--<div metal:fill-slot="foot" class="logos">
         <a href="http://codeforamerica.org"><img src="/images/cfawhite.png" height="100px"/></a>
         <a href="http://govloop.com"><img src="/images/govloopwhite.png"  height="100px"/></a>
     <br />    <br />
     
        <small>Questions? <a href="mailto:admin@welovepublicservice.org" style="color: white;">Drop us a line.</a></small>
-    </div>
+    </div>-->
      
 </html>

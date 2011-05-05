@@ -34,10 +34,19 @@
 <body>
     <div metal:define-slot="socialbuttons"></div>
     <div class="container">
-        <div metal:define-slot="main"></div>
+       
+        <div metal:define-slot="main">
+                </div>
+                
+                 <div id="sharebox" style="margin-top: 50px;">	
+                             <div class="title"><a href="/map">MAP</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="/">HOME</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="/video">VIDEO</a></div>
+                              <div class="content">
+                                  <a href="http://codeforamerica.org"><img src="/images/cfawhite.png" align="right" height="50px" hspace="20"/></a><a href="http://govloop.com"><img src="/images/govloopwhite.png" align="left" height="50px" hspace="20"   /></a>
+                              <div class="social"> <span  class='st_twitter_large' ></span><span  class='st_facebook_large' ></span><span  class='st_email_large' ></span></div>
+                            </div>
+            </div>
         <div metal:define-slot="foot"></div>
     </div>
-
 <script type="text/javascript" charset="utf-8">
   var _dashboard_project_id = "711f19a7a23768e86d2c1f21d6ac8bfb6e0564ed";
 </script>
